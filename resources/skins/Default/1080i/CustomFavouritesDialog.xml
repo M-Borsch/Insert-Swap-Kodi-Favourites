@@ -112,8 +112,9 @@
                             <top>290</top>
                             <left>10</left>
                             <right>10</right>
+			    <width>290</width>
                             <height>90</height>
-                            <font>font10</font>
+			    <font>font10</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
@@ -141,6 +142,7 @@
                             <top>290</top>
                             <left>10</left>
                             <right>10</right>
+			    <width>290</width>
                             <height>90</height>
                             <font>font10</font>
                             <align>left</align>
