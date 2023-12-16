@@ -2,7 +2,7 @@
 ![icon](https://github.com/doko-desuka/plugin.program.orderfavourites/raw/master/icon.png)  
 ### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites.  
 
-### Install it [from the zips in the Releases page]([https://github.com/M-Borsch/plugin.program.orderfavourites/tree/master/releases]).
+### Install it [from the zips in the Releases page](https://github.com/M-Borsch/plugin.program.orderfavourites/releases/tag/Order_Releases_Confluence).
 
 # How to use:
 
