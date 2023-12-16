@@ -1,5 +1,5 @@
 # Order Favourites (plugin.program.orderfavourites)
-![icon](https://github.com/doko-desuka/plugin.program.orderfavourites/raw/master/icon.png)  
+![icon](https://github.com/M-Borsch/plugin.program.orderfavourites/blob/master/icon.png)  
 ### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins (e.g. Confluence).
 
 ### Install it [from the zips in the Releases page](https://github.com/M-Borsch/plugin.program.orderfavourites/releases).
