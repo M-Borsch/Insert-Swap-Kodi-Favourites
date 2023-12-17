@@ -134,7 +134,7 @@
                         </control>
                         <control type="image">
                             <height>290</height>
-                            <texture fallback="DefaultFavourites.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+                            <texture fallback="OrderFavourites.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
                             <aspectratio>keep</aspectratio>
                             <bordersize>10</bordersize>
                         </control>
@@ -211,8 +211,7 @@
                     <height>500</height>
                     <onleft>200</onleft>
                     <onright>100</onright>
-                    <texturefocus colordiffuse="FF12A0C7">icon.png</texturefocus>
-                    <texturenofocus colordiffuse="30FFFFFF">icon.png</texturenofocus>
+ 			<texture fallback="OrderFavourites.png" background="true">"OrderFavourites.png"</texture>
                 </control>
 			</control>
 		</control>
