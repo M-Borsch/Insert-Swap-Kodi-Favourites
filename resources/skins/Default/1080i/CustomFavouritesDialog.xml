@@ -96,7 +96,7 @@
                         <control type="image">
                             <width>290</width>
                             <height>290</height>
-                            <texture fallback="DefaultFavourites.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+                            <texture fallback="OrderFavourites.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
                             <aspectratio>keep</aspectratio>
                             <bordersize>10</bordersize>
                         </control>
