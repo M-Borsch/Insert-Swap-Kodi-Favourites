@@ -9,10 +9,9 @@
   <extension point="xbmc.addon.metadata">
     <news>
 [COLOR lavender][B]Order Favourites[/B][/COLOR]
-
 [B]3.0:[/B]
-- Add logo thumbnail to editor.
-      
+- Add logo to editing screen.
+
 [B]2.0:[/B]
 - Add wrapping of Favourite titles.
 
