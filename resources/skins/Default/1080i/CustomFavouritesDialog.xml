@@ -207,6 +207,13 @@
                     <texturefocus colordiffuse="FF12A0C7">BGWhite.png</texturefocus>
                     <texturenofocus colordiffuse="30FFFFFF">BGWhite.png</texturenofocus>
                 </control>
+                <control type="image">
+                    <height>300</height>
+                    <onleft>200</onleft>
+                    <onright>100</onright>
+                    <texture fallback="OrderFavourites.png" background="true">OrderFavourites.png</texture>
+	            <bordersize>10</bordersize>
+                </control>
 			</control>
 		</control>
 	</controls>
