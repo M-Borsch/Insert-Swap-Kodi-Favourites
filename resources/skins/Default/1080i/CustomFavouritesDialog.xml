@@ -207,6 +207,13 @@
                     <texturefocus colordiffuse="FF12A0C7">BGWhite.png</texturefocus>
                     <texturenofocus colordiffuse="30FFFFFF">BGWhite.png</texturenofocus>
                 </control>
+		    <control type="image">
+                    <height>500</height>
+                    <onleft>200</onleft>
+                    <onright>100</onright>
+                    <texturefocus colordiffuse="FF12A0C7">icon.png</texturefocus>
+                    <texturenofocus colordiffuse="30FFFFFF">icon.png</texturenofocus>
+                </control>
 			</control>
 		</control>
 	</controls>
