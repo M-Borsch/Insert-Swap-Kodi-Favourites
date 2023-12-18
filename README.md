@@ -2,7 +2,7 @@
 ![icon](https://github.com/M-Borsch/plugin.program-orderfavourites.swap/blob/master/icon.png)  
 ### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins (e.g. Confluence). It is forked from an original release designed for the Estuary skin in Kodi.
 
-### Install it [from the zips in the Releases page](https://github.com/M-Borsch/plugin.program.orderfavourites.swap/releases).
+### Install it [from the zips in the Releases page](https://github.com/M-Borsch/plugin.program-orderfavourites.swap/releases).
 
 # How to use:
 
