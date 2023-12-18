@@ -1,8 +1,8 @@
 # Order Favourites (plugin.program.orderfavourites)
-![icon](https://github.com/M-Borsch/plugin.program.orderfavourites/blob/master/icon.png)  
+![icon](https://github.com/M-Borsch/plugin.program.orderfavourites.swap/blob/master/icon.png)  
 ### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins (e.g. Confluence). It is forked from an original release designed for the Estuary skin in Kodi.
 
-### Install it [from the zips in the Releases page](https://github.com/M-Borsch/plugin.program.orderfavourites/releases).
+### Install it [from the zips in the Releases page](https://github.com/M-Borsch/plugin.program.orderfavourites.swap/releases).
 
 # How to use:
 
@@ -10,8 +10,8 @@ The main menu shows 4 options.
 
 ### 1) Order favourites...   
 Opens a dialog where you can view and reorder your Favourites items.   
-- To reorder items, select an item to "mark" it, then select another item to move the marked item there.  
-(The marked item will be placed in **front** of the other item.)  
+- To reorder items, select an item to "mark" it, then select another item to **SWAP** with the marked item.  
+(The marked item will be placed where the **marked** item is and vice versa.)  
 (If an item is marked, you can select it again to unmark it.)  
 - Press the Close button to close that dialog when you're done editing (your changes won't be saved yet).  
 - If you've made some mistakes and want to start over, press the "Restore..." button to restore the favourites order from the Kodi favourites file. This will undo your unsaved changes.
