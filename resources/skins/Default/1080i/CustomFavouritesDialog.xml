@@ -211,7 +211,7 @@
                     <height>300</height>
                     <onleft>200</onleft>
                     <onright>100</onright>
-                    <texture fallback="OrderFavourites.png" background="true">OrderFavourites.png</texture>
+                    <texture fallback="OrderFavourites-Swap.png" background="true">OrderFavourites-Swap.png</texture>
 	            <bordersize>10</bordersize>
                 </control>
 		<control type="textbox">
