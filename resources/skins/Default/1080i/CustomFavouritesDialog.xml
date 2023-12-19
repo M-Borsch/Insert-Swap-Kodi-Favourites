@@ -215,16 +215,13 @@
 	            <bordersize>10</bordersize>
                 </control>
 		<control type="textbox">
-                            <top>290</top>
-                            <left>10</left>
-                            <right>10</right>
-			    <width>290</width>
-                            <height>90</height>
+                            <onleft>200</left>
+                            <onright>100</right>
+                            <height>100</height>
 			    <font>font10</font>
                             <align>left</align>
-                            <aligny>center</aligny>
+                            <aligny>top</aligny>
                             <label>Select "A" then select "B" - "A" will be placed att "B" and "B" will be placed at "A"</label>
-                            <visible>true</visible>
                 </control>
 		</control>
 	</control>
