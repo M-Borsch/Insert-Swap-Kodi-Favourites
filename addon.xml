@@ -8,17 +8,20 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <news>
-[COLOR lavender][B]Order Favourites - Swap Version[/B][/COLOR]
+      [COLOR lavender][B]Order Favourites - Swap Version[/B][/COLOR]
       
-[B]1.1:[/B]
-- Add description of what "swap" means on editing screen.
+      [B]1.1:[/B]
+      - Add description of what "swap" means on editing screen.
       
-[B]1.0.0:[/B]
-- Original release of the "Swap" version of Order Favourites.
+      [B]1.0.0:[/B]
+      - Original release of the "Swap" version of Order Favourites.
     </news>
+    <summary>
+      Reorder your Favourites made easy!
+    </summary>
     <description lang="en">
-Lets you reorder the entries in your Favourites by "swapping" entries in your Favourites list. Select "A" then "B" - "A" will be placed where "B" is and vice versa.
-Use this to quickly and easily organize your Favourites.
+      Lets you reorder the entries in your Favourites by "swapping" entries in your Favourites list. Select "A" then "B" - "A" will be placed where "B" is and vice versa.
+      Use this to quickly and easily organize your Favourites.
     </description>
     <platform>all</platform>
     <assets>
