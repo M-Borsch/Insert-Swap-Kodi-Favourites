@@ -214,16 +214,19 @@
                     <texture fallback="OrderFavourites.png" background="true">OrderFavourites.png</texture>
 	            <bordersize>10</bordersize>
                 </control>
-		<control type="label">
-                    <left>200</left>
-                    <right>0</right>
-                    <top>0</top>
-                    <aligny>center</aligny>
-                    <height>20</height>
-                    <label>Select "A" then select "B" - "A" will be placed att "B" and "B" will be placed at "A"</label>
-                    <shadowcolor>black</shadowcolor>
+		<control type="textbox">
+                            <top>290</top>
+                            <left>10</left>
+                            <right>10</right>
+			    <width>290</width>
+                            <height>90</height>
+			    <font>font10</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>Select "A" then select "B" - "A" will be placed att "B" and "B" will be placed at "A"</label>
+                            <visible>true</visible>
                 </control>
-			</control>
 		</control>
+	</control>
 	</controls>
 </window>
