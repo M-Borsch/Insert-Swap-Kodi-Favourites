@@ -217,11 +217,12 @@
 		<control type="textbox">
                     <height>100</height>
 		    <onleft>200</onleft>
+		    <width>200</width>
                     <onright>100</onright>
 		    <font>font10</font>
                     <align>left</align>
                     <aligny>top</aligny>
-                    <label>Select "A" then select "B" - "A" will be placed att "B" and "B" will be placed at "A"</label>
+                    <label>Select "[B]A" then select "B"[/B] - "A" will be placed at "B" and "B" will be placed at "A".</label>
                 </control>
 		</control>
 	</control>
