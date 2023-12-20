@@ -222,7 +222,7 @@
 		    <font>font10</font>
                     <align>left</align>
                     <aligny>top</aligny>
-                    <label>Window.Property(Behavior) Select [B]"A" then select "B"[/B]
+                    <label>Select [B]"A" then select "B"[/B]
 - [B] Swap:[/B] "A" will be placed at "B" and "B" will be placed at "A".
 - [B] Insert:[/B] "A" will be placed before/after "B"</label>
                 </control>
