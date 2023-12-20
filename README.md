@@ -1,5 +1,5 @@
 # Order Favourites
-![icon](https://github.com/M-Borsch/OrderFavourites/blob/master/icon.png)  
+![icon](https://github.com/M-Borsch/OrderFavourtites/blob/master/icon.png)  
 
 # Program Addon: Order Favourites
 
