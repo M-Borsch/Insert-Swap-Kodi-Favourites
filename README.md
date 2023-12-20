@@ -18,8 +18,11 @@ Version 1.0 of the Order Favourites :sunglasses:
 > **Swap**:
 >    The marked item **"A"** will be placed where the marked item **"B"** is and vice versa.
 >
-> **Insert**:
+> **Insert Before**:
 >    The marked item **"A"** will be placed **in front** the marked item **"B"** in the list.
+>
+>  > **Insert Affter**:
+>    The marked item **"A"** will be placed **after** the marked item **"B"** in the list.
 > 
 The main menu shows 4 options.
 
