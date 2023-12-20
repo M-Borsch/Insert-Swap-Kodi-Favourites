@@ -38,6 +38,3 @@ Saves your changes but doesn't reload Kodi (as this operation can crash in some 
 
 ### 4) Exit only
 Just steps back from the add-on, no saving.
-
-Note from Oroginal author:
-   PS: I consider this add-on feature frozen, I just wanted a quicker way to move Favorite items around. Feel free to fork and modify it, the code is public domain.
