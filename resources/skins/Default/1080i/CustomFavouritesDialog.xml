@@ -222,9 +222,9 @@
 		    <font>font10</font>
                     <align>left</align>
                     <aligny>top</aligny>
-                    <label>Select [B]"A" then select "B"[/B]</label>
-                    <label>[B] Swap:[/B] "A" will be placed at "B" and "B" will be placed at "A".</label>
-                    <label>[B] Insert:[/B] "A" will be placed before "B"</label>
+                    <label>Select [B]"A" then select "B"[/B]
+                    	<[B] Swap:[/B] "A" will be placed at "B" and "B" will be placed at "A".
+                    	<[B] Insert:[/B] "A" will be placed before "B"</label>
                 </control>
 		</control>
 	</control>
