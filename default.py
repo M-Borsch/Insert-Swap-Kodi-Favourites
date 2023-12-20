@@ -116,30 +116,46 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         else:
             # Something was already selected, so do the reodering.
             if self.indexFrom != selectedPosition:
-                # OLD METHOD:
-                # Reorder using the .pop() and .insert() methods of the 'self.allItems' list.
-                #itemFrom = self.allItems.pop(self.indexFrom)
-                #self.allItems.insert(selectedPosition, itemFrom)
+                self.allItems[self.indexFrom].setProperty('selected', '')
 
-                # NEW METHOD:
-                # Swap item A and item B.
-                self.allItems[self.indexFrom], self.allItems[selectedPosition] = (
-                    self.allItems[selectedPosition], self.allItems[self.indexFrom]
-                )
+                # Reorder the two distinct items in a specific way:
+                reorderingMethod = ADDON.getSetting('reorderingMethod')
+                # If using the swap mode, or if the items are direct neighbors, then
+                # just swap them.
+                if reorderingMethod == '0' \
+                   or (self.indexFrom == (selectedPosition + 1)) \
+                   or (self.indexFrom == (selectedPosition - 1)):
+                    # Swap A and B.
+                    self.allItems[self.indexFrom], self.allItems[selectedPosition] = (
+                        self.allItems[selectedPosition], self.allItems[self.indexFrom]
+                    )
+                else:
+                    itemFrom = self.allItems.pop(self.indexFrom)
+                    if reorderingMethod == '1':
+                        # Place A behind B.
+                        # In case A is at some point BEHIND of B, reduce
+                        # one index because popping A caused the list to shrink.
+                        if self.indexFrom < selectedPosition:
+                            selectedPosition = selectedPosition - 1
+                    else:
+                        # Place A ahead of B (the original ordering method).
+                        # In case A is at some point AHEAD of B, move up
+                        # one index because .insert() always puts it behind.
+                        if self.indexFrom > selectedPosition:
+                            selectedPosition = selectedPosition + 1
+                    self.allItems.insert(selectedPosition, itemFrom)
 
                 # Reset the selection state.
                 self.isDirty = True
                 self.indexFrom = None
-                self.allItems[selectedPosition].setProperty('selected', '')
 
-                # Commit the changes to the UI.
+                # Commit the changes to the UI, and highlight item A.
                 self.panel.reset()
                 self.panel.addItems(self.allItems)
                 self.panel.selectItem(selectedPosition)
             else: # User reselected the item, so just unmark it.
                 self.indexFrom = None
                 self.panel.getSelectedItem().setProperty('selected', '')
-
 
     def doUnselectClose(self):
         # If there's something selected, unselect it. Otherwise, close the dialog.
