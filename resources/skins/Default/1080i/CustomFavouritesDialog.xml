@@ -224,7 +224,7 @@
                     <aligny>top</aligny>
                     <label>Select [B]"A" then select "B"[/B]
 - [B] Swap:[/B] "A" will be placed at "B" and "B" will be placed at "A".
-- [B] Insert:[/B] "A" will be placed before "B"</label>
+- [B] Insert:[/B] "A" will be placed before/after "B"</label>
                 </control>
 		</control>
 	</control>
