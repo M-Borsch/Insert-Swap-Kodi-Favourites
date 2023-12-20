@@ -1,17 +1,31 @@
-# Order Favourites - Swap (plugin.program.orderfavourites.swap)
-![icon](https://github.com/M-Borsch/plugin.program-orderfavourites.swap/blob/master/icon.png)  
-### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins (e.g. Confluence). It is modified from an original release designed for the Estuary skin in Kodi.
+# Order Favourites
+![icon](https://github.com/M-Borsch/OrderFavourites/blob/master/icon.png)  
 
-### Install it [from the zips in the Releases page](https://github.com/M-Borsch/plugin.program-orderfavourites.swap/releases).
+# Program Addon: Order Favourites
 
+### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins (e.g. Confluence).
+> [!NOTE]
+> (Latest) - This is the latest version of the Order Favourites - Insert
+
+Version 1.1 of the Order Favourites :sunglasses:
+-  <a href="https://github.com/M-Borsch/OrderFavourites/releases">Download Order Favourties (1.0+MAtrix) (zip file)</a> (Latest)
+-------------------------------
 # How to use:
 
+> [!IMPORTANT]
+> Depending on the setting you set in the confiuration screen, this addon will either Swap items or Insert items into your Favourites list.
+>
+> Sawp:
+>    The marked item **"A"** will be placed where the marked item **"B"** is and vice versa.
+>
+> Insert:
+>    The marked item **"A"** will be placed **in front** the marked item **"B"** in the list.
+> 
 The main menu shows 4 options.
 
 ### 1) Order favourites...   
 Opens a dialog where you can view and reorder your Favourites items.   
-- To reorder items, select an item to "mark" it, then select another item to **"SWAP"** with the marked item.  
-(The marked item **"A"** will be placed where the marked item **"B"** is and vice versa.)  
+- To reorder items, select an item "A" to "mark" it, then select another item "B" to either **"SWAP"** or **"Insert"**.  
 (If an item is marked, you can select it again to unmark it.)  
 - Press the Close button to close that dialog when you're done editing (your changes won't be saved yet).  
 - If you've made some mistakes and want to start over, press the "Restore..." button to restore the favourites order from the Kodi favourites file. This will undo your unsaved changes.
