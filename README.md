@@ -13,7 +13,7 @@ Version 1.0 of the Order Favourites :sunglasses:
 # How to use:
 
 > [!IMPORTANT]
-> Depending on the setting you set in the confiuration screen, this addon will either **Swap** items or **Insert** items into your Favourites list.
+> Depending on the setting you set in the configuration screen, this addon will either **Swap** items or **Insert** items into your Favourites list.
 >
 > **Swap**:
 >    The marked item **"A"** will be placed where the marked item **"B"** is and vice versa.
