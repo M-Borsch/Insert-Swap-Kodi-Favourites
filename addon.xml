@@ -19,8 +19,9 @@ Reorder your Favourites made easy!
     <description lang="en">
 Lets you reorder the entries in your Favourites by either "swapping" or "inserting" entries in your Favourites list.
 
-Swap:   Select "A" then "B" - "A" will be placed where "B" is and vice versa.
-Insert: Select "A" then "B" - "A" will be placed in front of "B" iin the list.
+Select "A" then "B" 
+  Swap:   "A" will be placed where "B" is and vice versa.
+  Insert: "A" will be placed in front of "B" iin the list.
 
 Set this option in the configuration screen.
 
