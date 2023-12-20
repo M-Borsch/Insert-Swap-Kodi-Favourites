@@ -3,9 +3,9 @@
 
 # Program Addon: Order Favourites
 
-### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins (e.g. Confluence).
+### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins.
 > [!NOTE]
-> (Latest) - This is the latest version of the Order Favourites - Insert
+> (Latest) - This is the latest version of the Order Favourites
 
 Version 1.1 of the Order Favourites :sunglasses:
 -  <a href="https://github.com/M-Borsch/OrderFavourites/releases">Download Order Favourties (1.0+MAtrix) (zip file)</a> (Latest)
@@ -13,12 +13,12 @@ Version 1.1 of the Order Favourites :sunglasses:
 # How to use:
 
 > [!IMPORTANT]
-> Depending on the setting you set in the confiuration screen, this addon will either Swap items or Insert items into your Favourites list.
+> Depending on the setting you set in the confiuration screen, this addon will either **Swap** items or **Insert** items into your Favourites list.
 >
-> Sawp:
+> **Swap**:
 >    The marked item **"A"** will be placed where the marked item **"B"** is and vice versa.
 >
-> Insert:
+> **Insert**:
 >    The marked item **"A"** will be placed **in front** the marked item **"B"** in the list.
 > 
 The main menu shows 4 options.
