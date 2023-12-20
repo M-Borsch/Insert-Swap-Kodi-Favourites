@@ -7,7 +7,7 @@
 > [!NOTE]
 > (Latest) - This is the latest version of the Order Favourites
 
-Version 1.1 of the Order Favourites :sunglasses:
+Version 1.0 of the Order Favourites :sunglasses:
 -  <a href="https://github.com/M-Borsch/OrderFavourites/releases">Download Order Favourties (1.0+MAtrix) (zip file)</a> (Latest)
 -------------------------------
 # How to use:
