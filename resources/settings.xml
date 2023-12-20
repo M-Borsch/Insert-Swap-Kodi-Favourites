@@ -2,6 +2,6 @@
 <settings>
     <category label="Behavior">
         <setting id="reorderingMethod" label="Reordering Method" type="enum" default="0"
-                 values="Swap A and B|Place A before B|Place A ahead of B"/>
+                 values="Swap A and B|Insert A after B|Insert A before B"/>
     </category>
 </settings>
