@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="Insert-Swap-Kodi-Favourites" name="Order Favourites" version="1.0" provider-name="M-Borsch,MB-K@DI">
+<addon id="Insert-Swap-Kodi-Favourites" name="Insert/Swap Kodi Favourites" version="1.0" provider-name="M-Borsch,MB-K@DI">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
