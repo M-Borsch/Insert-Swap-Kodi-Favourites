@@ -1,4 +1,4 @@
-# Order Favourites
+# Insert-Swap Kodi Favourites
 ![icon](https://github.com/M-Borsch/OrderFavourtites/blob/master/icon.png)  
 
 # Program Addon: Insert-Swap Kodi Favourites
