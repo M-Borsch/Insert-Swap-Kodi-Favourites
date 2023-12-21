@@ -55,7 +55,7 @@
                     <right>0</right>
                     <top>0</top>
                     <aligny>center</aligny>
-                    <label>[B]Order Favourites[/B]</label>
+                    <label>[B]Insert/Swap Favourites[/B]</label>
                     <shadowcolor>black</shadowcolor>
                 </control>
                 <!-- "button overlay to avoid closing in dialog area." -->
@@ -111,12 +111,12 @@
                             <bordersize>10</bordersize>
                         </control>
                         <control type="textbox">
-                            <width>290</width>
+                            <width>270</width>
                             <top>290</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
-                            <font>font12</font>
+                            <font>font10</font>
                             <align>center</align>
                             <aligny>center</aligny>
                             <textcolor>FFFFFFFF</textcolor>
@@ -142,7 +142,7 @@
                             <bordersize>10</bordersize>
                         </control>
                         <control type="textbox">
-                            <width>290</width>
+                            <width>270</width>
                             <top>290</top>
                             <left>10</left>
                             <right>10</right>
