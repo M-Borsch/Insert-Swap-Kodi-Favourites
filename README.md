@@ -8,7 +8,7 @@
 > (Latest) - This is the latest version of the Insert-Swap Kodi Favourites
 
 Version 1.0 of Insert-Swap Kodi Favourites :sunglasses:
--  <a href="https://github.com/M-Borsch/OrderFavourtites/releases/tag/OrderFavourites-1.0">Download Order Favourties (1.0) (zip file)</a> (Latest)
+-  <a href="https://github.com/M-Borsch/OrderFavourtites/releases/tag/OrderFavourites-1.0">Download Insert-Swap-Kodi-Favourites (1.0) (zip file)</a> (Latest)
 -------------------------------
 # How to use:
 
