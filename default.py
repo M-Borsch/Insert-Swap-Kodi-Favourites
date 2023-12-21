@@ -168,7 +168,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     def doReload(self):
         if xbmcgui.Dialog().yesno(
-            'Order Favourites',
+            'Insert/Swap Favourites',
             'This will restore the order from the favourites file so you can try reordering again.\nProceed?'
         ):
             # Re-sort all items based on their original indices.
@@ -246,7 +246,7 @@ def clearWindowProperty(prop):
 
 # Debugging helper. Logs a LOGNOTICE-level message.
 def xbmcLog(*args):
-    xbmc.log('ORDER FAVOURITES > ' + ' '.join((var if isinstance(var, str) else repr(var)) for var in args), xbmc.LOGNOTICE)
+    xbmc.log('Insert/Swap FAVOURITES > ' + ' '.join((var if isinstance(var, str) else repr(var)) for var in args), xbmc.LOGNOTICE)
 
 #===================================================================================
 
@@ -259,7 +259,7 @@ if '/dialog' in PLUGIN_URL:
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
     except Exception as e:
         xbmcLog(traceback.format_exc())
-        xbmcgui.Dialog().ok('Order Favourites Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
+        xbmcgui.Dialog().ok('Insert/Swap Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
         clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
     finally:
         del ui # Delete the dialog instance after it's done, as it's not garbage collected.
@@ -269,7 +269,7 @@ elif '/save_reload' in PLUGIN_URL:
     try:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-            xbmcgui.Dialog().ok('Order Favourites', 'Save successful, press OK to reload your profile...')
+            xbmcgui.Dialog().ok('Insert/Swap', 'Save successful, press OK to reload your profile...')
             xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
             # Alternative way of issuing a profile reload, using JSON-RPC:
             #rpcQuery = (
@@ -282,18 +282,18 @@ elif '/save_reload' in PLUGIN_URL:
             xbmc.executebuiltin('Action(Back)')
     except Exception as e:
         xbmcLog(traceback.format_exc())
-        xbmcgui.Dialog().ok('Order Favourites Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
+        xbmcgui.Dialog().ok('Insert/Swap Favourites Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
 
 elif '/save_exit' in PLUGIN_URL:
     # Reload the current profile (which causes a reload of 'favourites.xml').
     try:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-            xbmcgui.Dialog().ok('Order Favourites', 'Save successful. Press OK to end the add-on...')
+            xbmcgui.Dialog().ok('Insert/Swap Favourites', 'Save successful. Press OK to end the add-on...')
         xbmc.executebuiltin('Action(Back)')
     except Exception as e:
         xbmcLog(traceback.format_exc())
-        xbmcgui.Dialog().ok('Order Favourites Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
+        xbmcgui.Dialog().ok('Insert/Swap Favourites Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
 
 elif '/exit_only' in PLUGIN_URL:
     # Clear the results property and go back one screen (to wherever the user came from).
@@ -308,8 +308,8 @@ else:
 
     dialogItem = xbmcgui.ListItem('[COLOR lavender][B]Order favourites...[/B][/COLOR]')
     dialogItem.setArt({'thumb': 'DefaultAddonContextItem.png'})
-    dialogItem.setInfo('video', {'plot': 'Open the dialog where you can order your favourites.[CR][B]How to ' \
-                                 'use:[/B] select one item, then select another to swap their place. ' \
+    dialogItem.setInfo('video', {'plot': 'Open the dialog where you can Insert/Swap your favourites.[CR][B]How to ' \
+                                 'use:[/B] select one item, then select another to Insert/Swap. ' \
                                  'Do this as much as needed. Finally, close the dialog and use the menus ' \
                                  'below to save your changes.'})
     saveReloadItem = xbmcgui.ListItem('[COLOR lavender][B]Save and Reload[/B][/COLOR]')
@@ -321,7 +321,7 @@ else:
     saveExitItem.setInfo('video', {'plot': 'Save any changes you made and exit the add-on. [B]Note:[/B] if you '
                                    'make any changes to your favourites using the Favourites screen (like adding, '
                                    'removing or reordering items) before closing Kodi, your changes from this '
-                                   'add-on will be forgotten.'})
+                                   'add-on will be ignored.'})
     exitItem = xbmcgui.ListItem('[COLOR lavender][B]Exit only[/B][/COLOR]')
     exitItem.setArt({'thumb': 'DefaultFolderBack.png'})
     exitItem.setInfo('video', {'plot': 'Exit the add-on (same as pressing Back), without saving your changes.'})
