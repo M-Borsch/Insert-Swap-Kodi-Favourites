@@ -55,7 +55,7 @@
                     <top>0</top>
                     <aligny>center</aligny>
                     <height>70</height>
-                    <label>[B]Order Favourites[/B] - Multi-Skin Version</label>
+                    <label>[B]Insert/Swap Favourites[/B] - Multi-Skin Version</label>
                     <shadowcolor>black</shadowcolor>
                 </control>
                 <!-- "button overlay to avoid closing in dialog area." -->
