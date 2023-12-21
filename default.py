@@ -312,17 +312,17 @@ else:
                                  'use:[/B] select one item, then select another to Insert/Swap. ' \
                                  'Do this as much as needed. Finally, close the dialog and use the menus ' \
                                  'below to save your changes.'})
-    saveReloadItem = xbmcgui.ListItem('[COLOR lavender][B]Save and Reload Your Favourites[/B][/COLOR]')
+    saveReloadItem = xbmcgui.ListItem('[COLOR lavender][B]Save and Reload Your Changes[/B][/COLOR]')
     saveReloadItem.setArt({'thumb': 'DefaultAddonsUpdates.png'})
     saveReloadItem.setInfo('video', {'plot': 'Save any changes you made and reload your Kodi profile '
                                        'to make the changes visible right now, without having to restart Kodi.'})
-    saveExitItem = xbmcgui.ListItem('[COLOR lavender][B]Save and Exit (No Reload)[/B][/COLOR]')
+    saveExitItem = xbmcgui.ListItem('[COLOR lavender][B]Save and Exit (No Reload - Leave Changes Pending)[/B][/COLOR]')
     saveExitItem.setArt({'thumb': 'DefaultFolderBack.png'})
     saveExitItem.setInfo('video', {'plot': 'Save any changes you made and exit the add-on. [B]Note:[/B] if you '
                                    'make any changes to your favourites using the Favourites screen (like adding, '
                                    'removing or reordering items) before closing Kodi, your changes from this '
                                    'add-on will be ignored.'})
-    exitItem = xbmcgui.ListItem('[COLOR lavender][B]Exit (abandon changes)[/B][/COLOR]')
+    exitItem = xbmcgui.ListItem('[COLOR lavender][B]Exit (Abandon Your Changes)[/B][/COLOR]')
     exitItem.setArt({'thumb': 'DefaultFolderBack.png'})
     exitItem.setInfo('video', {'plot': 'Exit the add-on (same as pressing Back), without saving your changes.'})
     xbmcplugin.addDirectoryItems(
