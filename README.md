@@ -1,13 +1,13 @@
 # Order Favourites
 ![icon](https://github.com/M-Borsch/OrderFavourtites/blob/master/icon.png)  
 
-# Program Addon: Order Favourites
+# Program Addon: Insert-Swap Kodi Favourites
 
 ### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins.
 > [!NOTE]
-> (Latest) - This is the latest version of the Order Favourites
+> (Latest) - This is the latest version of the Insert-Swap Kodi Favourites
 
-Version 1.0 of the Order Favourites :sunglasses:
+Version 1.0 of Insert-Swap Kodi Favourites :sunglasses:
 -  <a href="https://github.com/M-Borsch/OrderFavourtites/releases/tag/OrderFavourites-1.0">Download Order Favourties (1.0) (zip file)</a> (Latest)
 -------------------------------
 # How to use:
@@ -26,7 +26,7 @@ Version 1.0 of the Order Favourites :sunglasses:
 > 
 The main menu shows 4 options.
 
-### 1) Order favourites...   
+### 1) Insert-Swap Kodi Favourites...   
 Opens a dialog where you can view and reorder your Favourites items.   
 - To reorder items, select an item "A" to "mark" it, then select another item "B" to either **"SWAP"** or **"Insert"**.  
 (If an item is marked, you can select it again to unmark it.)  
