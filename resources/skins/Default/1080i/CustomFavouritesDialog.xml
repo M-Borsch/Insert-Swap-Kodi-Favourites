@@ -233,10 +233,7 @@
 	            <bordersize>10</bordersize>
                 </control>
 		<control type="textbox">
-			<dependencies>
-				<dependency>  type=”enable” setting=”reorderingMethod”>0</dependency>
-			</dependencies>
-			<visible>false</visible>
+			<visible><dependency> type=”enable” setting=”reorderingMethod”>0</dependency></visible>
 			<height>25</height>
 			<onleft>200</onleft>
 			<width>270</width>
@@ -244,7 +241,7 @@
 			<font>font10</font>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Still Thinks SWAP</label>
+			<label>New Thinks SWAP</label>
 		</control>
 		<control type="textbox">
                     <height>200</height>
