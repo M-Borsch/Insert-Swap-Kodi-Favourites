@@ -233,7 +233,7 @@
 	            <bordersize>10</bordersize>
                 </control>
 		<control type="textbox">
-			<visible><dependency> type=”enable” operator="!is" setting=”reorderingMethod”>0</dependency></visible>
+			<visible>type=”enable” operator="!is" setting=”reorderingMethod”>0</visible>
 			<height>25</height>
 			<onleft>200</onleft>
 			<width>270</width>
