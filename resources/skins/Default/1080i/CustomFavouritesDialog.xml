@@ -241,7 +241,7 @@
 			<font>font10</font>
 			<align>left</align>
 			<aligny>top</aligny>
-			<textcolor>BLUE</ textcolor> 
+			<textcolor>BLUE</textcolor> 
 			<label>New Thinks SWAP</label>
 		</control>
 		<control type="textbox">
