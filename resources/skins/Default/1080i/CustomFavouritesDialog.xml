@@ -241,7 +241,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
 		    <dependencies>
-			<dependency>  type=”enable” operator="!is" setting=”reorderingMethod”>0</dependency>
+			<dependency>  type=”enable” setting=”reorderingMethod”>0</dependency>
 		    </dependencies>
 		    <label>YES</label>
                 </control>
