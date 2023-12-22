@@ -236,15 +236,15 @@
 			<dependencies>
 				<dependency>  type=”enable” setting=”reorderingMethod”>0</dependency>
 			</dependencies>
-			<visible>!Addon.HasSetting(NoreorderingMethod)</visible>
-			<height>20</height>
+			<visible>false</visible>
+			<height>25</height>
 			<onleft>200</onleft>
 			<width>270</width>
 			<onright>100</onright>
 			<font>font10</font>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Thinks SWAP</label>
+			<label>Still Thinks SWAP</label>
 		</control>
 		<control type="textbox">
                     <height>200</height>
