@@ -233,19 +233,19 @@
 	            <bordersize>10</bordersize>
                 </control>
 		<control type="textbox">
-                    <height>40</height>
-		    <onleft>200</onleft>
-		    <width>270</width>
-                    <onright>100</onright>
-		    <font>font10</font>
-                    <align>left</align>
-                    <aligny>top</aligny>
-		    <dependencies>
-			<dependency>  type=”enable” setting=”reorderingMethod”>0</dependency>
-		    </dependencies>
-		    <label>YES</label>
-                </control>
-		    <control type="textbox">
+			<dependencies>
+				<dependency>  type=”enable” setting=”reorderingMethod”>0</dependency>
+			</dependencies>
+			<height>20</height>
+			<onleft>200</onleft>
+			<width>270</width>
+			<onright>100</onright>
+			<font>font10</font>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Thinks SWAP</label>
+		</control>
+		<control type="textbox">
                     <height>200</height>
 		    <onleft>200</onleft>
 		    <width>270</width>
