@@ -240,17 +240,6 @@
 		    <font>font10</font>
                     <align>left</align>
                     <aligny>top</aligny>
-                    <label>String.(reorderingMethod.Value)
-		    </label>
-                </control>
-		<control type="textbox">
-                    <height>200</height>
-		    <onleft>200</onleft>
-		    <width>270</width>
-                    <onright>100</onright>
-		    <font>font10</font>
-                    <align>left</align>
-                    <aligny>top</aligny>
                     <label>Select [B]"A" then select "B"[/B]
 - [B] Swap:[/B] "A" will be placed at "B" and "B" will be placed at "A".
 - [B] Insert:[/B] "A" will be placed before/after "B"
