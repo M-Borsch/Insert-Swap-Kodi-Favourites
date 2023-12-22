@@ -236,6 +236,7 @@
 			<dependencies>
 				<dependency>  type=”enable” setting=”reorderingMethod”>0</dependency>
 			</dependencies>
+			<visible>!Addon.HasSetting(NoreorderingMethod)</visible>
 			<height>20</height>
 			<onleft>200</onleft>
 			<width>270</width>
