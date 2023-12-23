@@ -127,7 +127,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
                 # Reorder the two distinct items in a specific way:
                 # reorderingMethod = ADDON.getSetting('reorderingMethod')
-                reorderingMethod = getRawWindowProperty(REORDOR_METHOD)
+                reorderingMethod = getRawWindowProperty(REORDER_METHOD)
 
                 # If using the swap mode, or if the items are direct neighbors, then
                 # just swap them.
