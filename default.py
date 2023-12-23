@@ -34,7 +34,7 @@ FAVOURITES_PATH = 'special://userdata/favourites.xml'
 THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
-REORDER_METHOD = '0'
+REORDER_METHOD = 'reorder'
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
@@ -106,7 +106,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.panel.addItems(self.allItems)
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
         reorderingMethod = ADDON.getSetting('reorderingMethod')
-        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
+        self.setProperty(REORDER_METHOD, reorderingMethod)
 
     def onClick(self, controlId):
         self.idHandlerDict.get(controlId, self.noop)()
