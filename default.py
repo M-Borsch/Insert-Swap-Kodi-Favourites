@@ -98,8 +98,6 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Automatically called before the dialog is shown. The UI controls exist now.
     def onInit(self):
-        reorderingMethod = ADDON.getSetting('reorderingMethod')
-        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
         self.panel = self.getControl(101)
         self.panel.reset()
         self.panel.addItems(self.allItems)
@@ -265,6 +263,8 @@ if '/dialog' in PLUGIN_URL:
     try:
         result = ui.doCustomModal(favouritesDataGen())
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
+        reorderingMethod = ADDON.getSetting('reorderingMethod')
+        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
     except Exception as e:
         xbmcLog(traceback.format_exc())
         xbmcgui.Dialog().ok('Insert/Swap Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
