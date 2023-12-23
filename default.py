@@ -86,6 +86,8 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Function used to start the dialog.
     def doCustomModal(self, favouritesGen):
+        reorderingMethod = ADDON.getSetting('reorderingMethod')
+        self.setProperty(REORDER_METHOD, reorderingMethod)
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
         self.isDirty = False # Bool saying if there were any user-made changes at all.
@@ -263,9 +265,7 @@ def xbmcLog(*args):
 
 if '/dialog' in PLUGIN_URL:
     ui = CustomFavouritesDialog('CustomFavouritesDialog.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
-    try:
-        reorderingMethod = ADDON.getSetting('reorderingMethod')
-        ui.setProperty(REORDER_METHOD, reorderingMethod)       
+    try:  
         result = ui.doCustomModal(favouritesDataGen())
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
     except Exception as e:
