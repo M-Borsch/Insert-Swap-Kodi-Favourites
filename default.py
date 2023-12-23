@@ -98,6 +98,8 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Automatically called before the dialog is shown. The UI controls exist now.
     def onInit(self):
+        reorderingMethod = ADDON.getSetting('reorderingMethod')
+        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
         self.panel = self.getControl(101)
         self.panel.reset()
         self.panel.addItems(self.allItems)
@@ -124,8 +126,6 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
                 # Reorder the two distinct items in a specific way:
                 # reorderingMethod = ADDON.getSetting('reorderingMethod')
-                reorderingMethod = ADDON.getSetting('reorderingMethod')
-                setRawWindowProperty(REORDER_METHOD, reorderingMethod)
                 reorderingMethod = getRawWindowProperty(REORDOR_METHOD)
 
                 # If using the swap mode, or if the items are direct neighbors, then
