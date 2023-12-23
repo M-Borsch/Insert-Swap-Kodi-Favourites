@@ -4,7 +4,12 @@
 # In other words, this is an add-on to visually edit your
 # favourites.xml file.
 #
-# doko-desuka 2023
+# doko-desuka 2023: Version 1.4
+# --------------------------------------------------------------------
+# M-Borsch 2023-12-23: Version 1.4.1
+# - Updated to optimize reading of renderMethod
+# - define renderMethod as Window property to allow modal dialog to
+#   use to be contextual.
 # ====================================================================
 import re
 import sys
@@ -93,6 +98,10 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Automatically called before the dialog is shown. The UI controls exist now.
     def onInit(self):
+	# Grab the renderMethod from settings.xml and make Window property
+	reorderingMethod = ADDON.getSetting('reorderingMethod')
+	setRawWindowProperty(REORDER_METHOD, reorderingMethod)
+
         self.panel = self.getControl(101)
         self.panel.reset()
         self.panel.addItems(self.allItems)
@@ -119,7 +128,10 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
                 self.allItems[self.indexFrom].setProperty('selected', '')
 
                 # Reorder the two distinct items in a specific way:
-                reorderingMethod = ADDON.getSetting('reorderingMethod')
+                # reorderingMethod = ADDON.getSetting('reorderingMethod')
+
+                reorderingMethod = getRawWindowProperty(REORDOR_METHOD)
+
                 # If using the swap mode, or if the items are direct neighbors, then
                 # just swap them.
                 if reorderingMethod == '0' \
@@ -261,6 +273,7 @@ if '/dialog' in PLUGIN_URL:
         xbmcLog(traceback.format_exc())
         xbmcgui.Dialog().ok('Insert/Swap Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
         clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
+        clearWindowProperty(REORDER_METHOD)
     finally:
         del ui # Delete the dialog instance after it's done, as it's not garbage collected.
 
@@ -269,6 +282,8 @@ elif '/save_reload' in PLUGIN_URL:
     try:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
+	    clearWindowProperty(REORDER_METHOD)
+
             xbmcgui.Dialog().ok('Insert/Swap', 'Save successful, press OK to reload your profile...')
             xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
             # Alternative way of issuing a profile reload, using JSON-RPC:
@@ -289,6 +304,7 @@ elif '/save_exit' in PLUGIN_URL:
     try:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
+            clearWindowProperty(REORDER_METHOD)
             xbmcgui.Dialog().ok('Insert/Swap Favourites', 'Save successful. Press OK to end the add-on...')
         xbmc.executebuiltin('Action(Back)')
     except Exception as e:
@@ -298,6 +314,8 @@ elif '/save_exit' in PLUGIN_URL:
 elif '/exit_only' in PLUGIN_URL:
     # Clear the results property and go back one screen (to wherever the user came from).
     clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
+    clearWindowProperty(REORDER_METHOD)
+
     xbmc.executebuiltin('Action(Back)')
     # Alternative action, going to the Home screen.
     #xbmc.executebuiltin('ActivateWindow(home)') # ID taken from https://kodi.wiki/view/Window_IDs
