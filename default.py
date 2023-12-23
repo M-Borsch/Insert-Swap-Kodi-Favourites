@@ -103,6 +103,8 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.panel.reset()
         self.panel.addItems(self.allItems)
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
+        reorderingMethod = ADDON.getSetting('reorderingMethod')
+        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
 
     def onClick(self, controlId):
         self.idHandlerDict.get(controlId, self.noop)()
@@ -264,13 +266,10 @@ if '/dialog' in PLUGIN_URL:
     try:
         result = ui.doCustomModal(favouritesDataGen())
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
-        reorderingMethod = ADDON.getSetting('reorderingMethod')
-        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
     except Exception as e:
         xbmcLog(traceback.format_exc())
         xbmcgui.Dialog().ok('Insert/Swap Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
         clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-        clearWindowProperty(REORDER_METHOD)
     finally:
         del ui # Delete the dialog instance after it's done, as it's not garbage collected.
 
@@ -279,7 +278,6 @@ elif '/save_reload' in PLUGIN_URL:
     try:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-            clearWindowProperty(REORDER_METHOD)
 
             xbmcgui.Dialog().ok('Insert/Swap', 'Save successful, press OK to reload your profile...')
             xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
@@ -301,7 +299,6 @@ elif '/save_exit' in PLUGIN_URL:
     try:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-            clearWindowProperty(REORDER_METHOD)
             xbmcgui.Dialog().ok('Insert/Swap Favourites', 'Save successful. Press OK to end the add-on...')
         xbmc.executebuiltin('Action(Back)')
     except Exception as e:
