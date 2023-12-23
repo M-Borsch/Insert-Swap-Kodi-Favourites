@@ -34,7 +34,7 @@ FAVOURITES_PATH = 'special://userdata/favourites.xml'
 THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
-REORDER_METHOD = 0
+REORDER_METHOD = '0'
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
