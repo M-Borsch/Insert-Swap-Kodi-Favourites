@@ -278,7 +278,7 @@ elif '/save_reload' in PLUGIN_URL:
     try:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-	    clearWindowProperty(REORDER_METHOD)
+            clearWindowProperty(REORDER_METHOD)
 
             xbmcgui.Dialog().ok('Insert/Swap', 'Save successful, press OK to reload your profile...')
             xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
