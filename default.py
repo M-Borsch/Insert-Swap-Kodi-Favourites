@@ -38,8 +38,8 @@ THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
 REORDER_METHOD = 'reorder'
-THUMB_SIZE = 'thumb_size'
-FONT_SIZE = 'font_size'
+THUMB_SIZE = 'thumbSize'
+FONT_SIZE = 'fontSize'
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
