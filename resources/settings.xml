@@ -3,9 +3,9 @@
     <category label="General">
         <setting id="reorderingMethod" label="Reordering Method" type="enum" default="0"
                  values="Swap A and B|Insert A before B|Insert A after B"/>
-        <setting id="thumbnailSize" label="Tumbnail Size" type="enum" default="1"
+        <setting id="thumbSize" label="Tumbnail Size" type="enum" default="1"
                  values="Small|Large"/>
-        <setting id="fontlSize" label="Font Size" type="enum" default="0"
+        <setting id="fontSize" label="Font Size" type="enum" default="0"
                  values="Smaill|Large"/>
     </category>
 </settings>
