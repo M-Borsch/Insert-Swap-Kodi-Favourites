@@ -4,7 +4,6 @@
 # In other words, this is an add-on to visually edit your
 # favourites.xml file.
 #
-# doko-desuka 2023: Version 1.4
 # --------------------------------------------------------------------
 # M-Borsch 2023-12-24: Version 1.4.2
 # - Updated to include Thumbnail and Font size settings.
@@ -13,6 +12,8 @@
 # - Updated to optimize reading of renderMethod
 # - define renderMethod as Window property to allow modal dialog to
 #   use to be contextual.
+# --------------------------------------------------------------------
+# doko-desuka 2023: Version 1.4
 # ====================================================================
 import re
 import sys
@@ -96,7 +97,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
         self.setProperty(THUMB_SIZE, thumbSize)
         fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
-        if fontSize == '0' 
+        if fontSize == '0':
             self.setProperty(FONT_SIZE, 'font10')
         elif fontsize == '1':
             self.setProperty(FONT_SIZE, 'font11')
