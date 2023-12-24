@@ -11,7 +11,7 @@
 >
 > - [x] - (Selectable Order Method) - ~~Add ability to configure Order Method~~
 >
-> - [ ] -(Icon Size) - Add ability to adjust/configure the size of the icons
+> - [ ] - (Icon Size) - Add ability to adjust/configure the size of the icons
 >
 > - [ ] - (Font Size) - Add ability to adjust/configure the size of the font used for label 
 
