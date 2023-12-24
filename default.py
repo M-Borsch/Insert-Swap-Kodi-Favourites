@@ -91,6 +91,12 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Function used to start the dialog.
     def doCustomModal(self, favouritesGen):
+        reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
+        self.setProperty(REORDER_METHOD, reorderingMethod)
+        thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
+        self.setProperty(THUMB_SIZE, thumbSize)
+        fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
+        self.setProperty(FONT_SIZE, fontSize)
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
         self.isDirty = False # Bool saying if there were any user-made changes at all.
@@ -110,10 +116,6 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
         reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
         setRawWindowProperty(REORDER_METHOD, reorderingMethod)
-        thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
-        setRawWindowProperty(THUMB_SIZE, thumbSize)
-        fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
-        setRawWindowProperty(FONT_SIZE, fontSize)
 
     def onClick(self, controlId):
         self.idHandlerDict.get(controlId, self.noop)()
