@@ -34,6 +34,7 @@ FAVOURITES_PATH = 'special://userdata/favourites.xml'
 THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
+REORDER_METHOD = 'reorder'
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
@@ -85,6 +86,8 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Function used to start the dialog.
     def doCustomModal(self, favouritesGen):
+        reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
+        self.setProperty(REORDER_METHOD, reorderingMethod)
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
         self.isDirty = False # Bool saying if there were any user-made changes at all.
@@ -98,12 +101,13 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Automatically called before the dialog is shown. The UI controls exist now.
     def onInit(self):
-        reorderingMethod = ADDON.getSetting('reorderingMethod')
-        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
         self.panel = self.getControl(101)
         self.panel.reset()
         self.panel.addItems(self.allItems)
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
+        reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
+        reorderingMethod = ADDON.getSetting('reorderingMethod')
+        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
 
     def onClick(self, controlId):
         self.idHandlerDict.get(controlId, self.noop)()
@@ -126,7 +130,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
                 # Reorder the two distinct items in a specific way:
                 # reorderingMethod = ADDON.getSetting('reorderingMethod')
-                reorderingMethod = getRawWindowProperty(REORDOR_METHOD)
+                reorderingMethod = getRawWindowProperty(REORDER_METHOD)
 
                 # If using the swap mode, or if the items are direct neighbors, then
                 # just swap them.
@@ -262,7 +266,7 @@ def xbmcLog(*args):
 
 if '/dialog' in PLUGIN_URL:
     ui = CustomFavouritesDialog('CustomFavouritesDialog.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
-    try:
+    try:  
         result = ui.doCustomModal(favouritesDataGen())
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
     except Exception as e:
@@ -270,6 +274,7 @@ if '/dialog' in PLUGIN_URL:
         xbmcgui.Dialog().ok('Insert/Swap Error', 'ERROR: "%s"\n(Please check the log for more info)' % str(e))
         clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
         clearWindowProperty(REORDER_METHOD)
+
     finally:
         del ui # Delete the dialog instance after it's done, as it's not garbage collected.
 
@@ -279,7 +284,7 @@ elif '/save_reload' in PLUGIN_URL:
         if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
             clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
             clearWindowProperty(REORDER_METHOD)
-
+            
             xbmcgui.Dialog().ok('Insert/Swap', 'Save successful, press OK to reload your profile...')
             xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
             # Alternative way of issuing a profile reload, using JSON-RPC:
