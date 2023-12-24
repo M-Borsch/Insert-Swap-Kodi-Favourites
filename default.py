@@ -6,6 +6,9 @@
 #
 # doko-desuka 2023: Version 1.4
 # --------------------------------------------------------------------
+# M-Borsch 2023-12-24: Version 1.4.2
+# - Updated to include Thumbnail and Font size settings.
+# --------------------------------------------------------------------
 # M-Borsch 2023-12-23: Version 1.4.1
 # - Updated to optimize reading of renderMethod
 # - define renderMethod as Window property to allow modal dialog to
@@ -35,6 +38,8 @@ THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
 REORDER_METHOD = 'reorder'
+THUMB_SIZE = 'thumb_size'
+FONT_SIZE = 'font_size'
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
@@ -88,6 +93,10 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
     def doCustomModal(self, favouritesGen):
         reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
         self.setProperty(REORDER_METHOD, reorderingMethod)
+        thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
+        self.setProperty(THUMB_SIZE, thumbSize)
+        fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
+        self.setProperty(FONT_SIZE, fontSize)
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
         self.isDirty = False # Bool saying if there were any user-made changes at all.
@@ -106,7 +115,6 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.panel.addItems(self.allItems)
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
         reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
-        reorderingMethod = ADDON.getSetting('reorderingMethod')
         setRawWindowProperty(REORDER_METHOD, reorderingMethod)
 
     def onClick(self, controlId):
@@ -129,7 +137,6 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
                 self.allItems[self.indexFrom].setProperty('selected', '')
 
                 # Reorder the two distinct items in a specific way:
-                # reorderingMethod = ADDON.getSetting('reorderingMethod')
                 reorderingMethod = getRawWindowProperty(REORDER_METHOD)
 
                 # If using the swap mode, or if the items are direct neighbors, then
