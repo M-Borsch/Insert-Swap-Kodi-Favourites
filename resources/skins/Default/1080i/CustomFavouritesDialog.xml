@@ -241,7 +241,7 @@
 			<font>font10</font>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>[B]Font:[/B] Window.Property(thumbSize)[B]Font:[/B] Window.Property(fontSize)</label>
+			<label>[B]THUMB: [/B]$INFO[Window.Property(thumbSize)] [B]FONT: [/B] $INFO[Window.Property(fontSize)]</label>
 		</control>
 		<control type="textbox">
 			<visible>String.IsEqual(Window.Property(reorder),0)</visible>
