@@ -13,7 +13,5 @@
 >
 > - [ ] -(Icon Size) - Add ability to adjust/configure the size of the icons
 >
-> - [x] - (Font Size) - Add ability to adjust/configure the size of the font used for label 
-
-- [x] - (Font Size) - Add ability to adjust/configure the size of the font used for label 
+> - [ ] - (Font Size) - Add ability to adjust/configure the size of the font used for label 
 
