@@ -35,6 +35,7 @@ THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
 REORDER_METHOD = 'reorder'
+REORDER_VALS = ('0', '1, '2')
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
@@ -86,8 +87,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
 
     # Function used to start the dialog.
     def doCustomModal(self, favouritesGen):
-        reorderingMethod = 0
-        reorderingMethod = ADDON.getSetting('reorderingMethod')
+        reorderingMethod = '0', if reorderingMethod no '0' reorderingMethod not in REORDER_VALS else ADDON.getSetting('reorderingMethod')
         self.setProperty(REORDER_METHOD, reorderingMethod)
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
@@ -106,7 +106,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.panel.reset()
         self.panel.addItems(self.allItems)
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
-        reorderingMethod = 0
+        reorderingMethod = '0', if reorderingMethod no '0' reorderingMethod not in REORDER_VALS else ADDON.getSetting('reorderingMethod')
         reorderingMethod = ADDON.getSetting('reorderingMethod')
         setRawWindowProperty(REORDER_METHOD, reorderingMethod)
 
