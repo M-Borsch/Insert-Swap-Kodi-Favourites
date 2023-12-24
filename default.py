@@ -116,7 +116,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
         reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
         setRawWindowProperty(REORDER_METHOD, reorderingMethod)
-        setRawWindowProperty(FONT_SIZE, '99')
+        setRawWindowProperty(FONT_SIZE, '1')
 
     def onClick(self, controlId):
         self.idHandlerDict.get(controlId, self.noop)()
