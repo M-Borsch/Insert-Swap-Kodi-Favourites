@@ -241,7 +241,7 @@
 			<font>font10</font>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Order Mode: Swap</label>
+			<label>[B]Swap:[/B]</label>
 		</control>
 		<control type="textbox">
 			<visible>String.IsEqual(Window.Property(reorder),1)</visible>
@@ -252,7 +252,8 @@
 			<font>font10</font>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Order Mode: Insert A [B]before[/B] B</label>
+			<label>[B]Insert A before B:[/B]
+			</label>
 		</control>
 		<control type="textbox">
 			<visible>String.IsEqual(Window.Property(reorder),2)</visible>
@@ -263,7 +264,8 @@
 			<font>font10</font>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Order Mode: Insert A [B]after[/B] B</label>
+			<label>[B]Insert A after B:[/B]
+			</label>
 		</control>
 		<control type="textbox">
                     <visible>String.IsEqual(Window.Property(reorder),0)</visible>
