@@ -9,7 +9,7 @@
 >
 > - [x] - (Configuration Panel) - ~~Add configuration panel to Addon~~
 >
-> - [x] - (Selectable Order Method) - ~~Add ability to configure Order Method~~
+> - [x] - (Selectable Order Method) - ~~Add ability to configure Order Method (Swap, Insert Before, Insert After)~~
 >
 > - [ ] - (Icon Size) - Add ability to adjust/configure the size of the icons
 >
