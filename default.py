@@ -37,7 +37,7 @@ except ImportError as e:
 import xbmc, xbmcgui, xbmcplugin, xbmcvfs
 from xbmcaddon import Addon
 
-
+DEBUG = false
 FAVOURITES_PATH = 'special://userdata/favourites.xml'
 THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
@@ -281,10 +281,10 @@ def xbmcLog(*args):
 if '/dialog' in PLUGIN_URL:
     thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
     if thumbSize == '0':
-        xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is SMALL)' % thumbSize)
+        if DEBUG: xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is SMALL)' % thumbSize)
         ui = CustomFavouritesDialog('CustomFavouritesDialog-smThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     else:
-        xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is LARGE)' % thumbSize)
+        if DEBUG: xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is LARGE)' % thumbSize)
         ui = CustomFavouritesDialog('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     try:  
         result = ui.doCustomModal(favouritesDataGen())
