@@ -5,16 +5,7 @@
                  values="Swap A and B|Insert A before B|Insert A after B"/>
         <setting id="fontSize" label="Font Size" type="enum" default="0"
                  values="Small|Medium|Large"/>
-        <setting id="thumbSize" type="integer" label="Font Size" help="">
-                 <level>0</level>
-                 <default>145</default>
-                 <constraints>
-                    <options>
-                       <option label="Small">145</option>
-                       <option label="Large">290</option>
-                    </options>
-                 </constraints>
-	            <control type="spinner" format="string"/>
-	</>
+        <setting id="thumbSize" label="Tumbnail Size" type="labelnum" default="1"
+                 values="145|290"/>
     </category>
 </settings>
