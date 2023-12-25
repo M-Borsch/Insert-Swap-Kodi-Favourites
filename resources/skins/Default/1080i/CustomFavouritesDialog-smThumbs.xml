@@ -114,7 +114,7 @@
                             <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
                             <visible>String.IsEqual(Window.Property(fontSize),0) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
-                            <top>290</top>
+                            <top>145</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
@@ -128,7 +128,7 @@
                             <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
                             <visible>String.IsEqual(Window.Property(fontSize),1) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
-                            <top>290</top>
+                            <top>145</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
@@ -142,7 +142,7 @@
                             <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
                             <visible>String.IsEqual(Window.Property(fontSize),2) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
-                            <top>290</top>
+                            <top>145</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
@@ -174,7 +174,7 @@
                             <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
                             <visible>String.IsEqual(Window.Property(fontSize),0) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
-                            <top>290</top>
+                            <top>145</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
@@ -189,7 +189,7 @@
                             <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
                             <visible>String.IsEqual(Window.Property(fontSize),1) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
-                            <top>290</top>
+                            <top>145</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
@@ -204,7 +204,7 @@
                             <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
                             <visible>String.IsEqual(Window.Property(fontSize),2) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
-                            <top>290</top>
+                            <top>145</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
@@ -292,18 +292,6 @@
                     <texture fallback="InsertSwapKodiFavourites.png" background="true">InsertSwapKodiFavourites.png</texture>
 	            <bordersize>10</bordersize>
                 </control>
-<!-- DEBUG -->
-		<control type="textbox">
-			<visible>true</visible>
-			<height>25</height>
-			<onleft>200</onleft>
-			<width>270</width>
-			<onright>100</onright>
-			<font>font10</font>
-			<align>left</align>
-			<aligny>top</aligny>
-			<label>[B]THUMB: [/B]$INFO[Window.Property(thumbSize)] [B]FONT: [/B] $INFO[Window.Property(fontSize)]</label>
-		</control>
 		<control type="textbox">
 			<visible>String.IsEqual(Window.Property(reorder),0)</visible>
 			<height>25</height>
