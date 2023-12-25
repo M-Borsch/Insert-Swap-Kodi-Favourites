@@ -5,5 +5,7 @@
                  values="Swap A and B|Insert A before B|Insert A after B"/>
         <setting id="fontSize" label="Font Size" type="enum" default="0"
                  values="Small|Medium|Large"/>
+        <setting id="thumbSize" label="Thumnbail Size" type="enum" default="1"
+                 values="Small|Large"/>
     </category>
 </settings>
