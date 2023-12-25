@@ -7,5 +7,6 @@
                  values="Small|Medium|Large"/>
         <setting id="thumbSize" label="Tumbnail Size" type="labelnum"
                  values="145|290"/>
+    </setting>
     </category>
 </settings>
