@@ -281,8 +281,10 @@ def xbmcLog(*args):
 if '/dialog' in PLUGIN_URL:
     thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
     if thumbSize == '0':
+        xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is SMALL)' % str(e))
         ui = CustomFavouritesDialog('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     else:
+        xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is LARGE)' % str(e))
         ui = CustomFavouritesDialog('CustomFavouritesDialog-smThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     try:  
         result = ui.doCustomModal(favouritesDataGen())
