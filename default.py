@@ -52,7 +52,7 @@ PLUGIN_URL = sys.argv[0]
 
 
 # Custom Favourites window class for managing the favourites items.
-class CustomFavouritesDialog-lgThumbs(xbmcgui.WindowXMLDialog):
+class CustomFavouritesDialogLgThumbs(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
         xbmcgui.WindowXMLDialog.__init__(self, *args, **kwargs)
 
@@ -212,7 +212,7 @@ class CustomFavouritesDialog-lgThumbs(xbmcgui.WindowXMLDialog):
 
 #===================================================================================
 # Custom Favourites window class for managing the favourites items.
-class CustomFavouritesDialog-smThumbs(xbmcgui.WindowXMLDialog):
+class CustomFavouritesDialogSmThumbs(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
         xbmcgui.WindowXMLDialog.__init__(self, *args, **kwargs)
 
@@ -439,7 +439,7 @@ def xbmcLog(*args):
 ### Entry point ###
 
 if '/dialog' in PLUGIN_URL:
-    ui = CustomFavouritesDialog-lgThumbs('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
+    ui = CustomFavouritesDialogLgThumbs('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     try:  
         result = ui.doCustomModal(favouritesDataGen())
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
