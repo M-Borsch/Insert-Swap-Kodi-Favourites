@@ -210,6 +210,167 @@ class CustomFavouritesDialog-lgThumbs(xbmcgui.WindowXMLDialog):
         INDENT_STRING = ' ' * 4
         return '<favourites>\n' + '\n'.join((INDENT_STRING + li.getPath()) for li in self.allItems) + '\n</favourites>\n'
 
+#===================================================================================
+# Custom Favourites window class for managing the favourites items.
+class CustomFavouritesDialog-smThumbs(xbmcgui.WindowXMLDialog):
+    def __init__(self, *args, **kwargs):
+        xbmcgui.WindowXMLDialog.__init__(self, *args, **kwargs)
+
+        # Map control IDs to custom handler methods. You can find the control IDs inside
+        # the custom skin XML bundled with this add-on (/resources/skins/Default/1080i/CustomFavouritesDialog-lgThumbs.XML).
+        self.idHandlerDict = {
+            101: self.doSelect,
+            301: self.close,
+            302: self.doReload,
+        }
+
+        # Map action IDs to custom handler methods. See more action IDs in
+        # https://github.com/xbmc/xbmc/blob/master/xbmc/input/actions/ActionIDs.h
+        self.actionHandlerDict = {
+            # All click/select actions are already handled by 'idHandlerDict' above.
+            #7: self.doSelect, # ACTION_SELECT_ITEM
+            #100: self.doSelect, # ACTION_MOUSE_LEFT_CLICK
+            #108: self.doSelect, # ACTION_MOUSE_LONG_CLICK
+            9: self.doUnselectClose, # ACTION_PARENT_DIR
+            92: self.doUnselectClose, # ACTION_NAV_BACK
+            10: self.doUnselectClose, # ACTION_PREVIOUS_MENU
+            101: self.doUnselectClose, # ACTION_MOUSE_RIGHT_CLICK
+            110: self.doUnselectClose # ACTION_BACKSPACE
+        }
+        self.noop = lambda: None
+
+
+    @staticmethod
+    def _makeFavourites(favouritesGen):
+        LISTITEM = xbmcgui.ListItem
+        artDict = {'thumb': None}
+        for index, data in enumerate(favouritesGen):
+            # The path of each ListItem contains the original favourite entry XML text (with the label, thumb and URL)
+            # and this is what's written to the favourites file upon saving -- what changes is the order of the items.
+            li = LISTITEM(data[0], path=data[2])
+            artDict['thumb'] = data[1] # Slightly faster than recreating a dict on every item.
+            li.setArt(artDict)
+            li.setProperty('index', str(index)) # To help with resetting, if necessary.
+            yield li
+
+
+    # Function used to start the dialog.
+    def doCustomModal(self, favouritesGen):
+        reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
+        self.setProperty(REORDER_METHOD, reorderingMethod)
+        fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
+        self.setProperty(FONT_SIZE, fontSize)
+
+        self.allItems = list(self._makeFavourites(favouritesGen))
+        self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
+        self.isDirty = False # Bool saying if there were any user-made changes at all.
+
+        self.doModal()
+        if self.isDirty:
+            return self._makeResult()
+        else:
+            return ''
+
+
+    # Automatically called before the dialog is shown. The UI controls exist now.
+    def onInit(self):
+        self.panel = self.getControl(101)
+        self.panel.reset()
+        self.panel.addItems(self.allItems)
+        self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
+        reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
+        setRawWindowProperty(REORDER_METHOD, reorderingMethod)
+        thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
+        setRawWindowProperty(THUMB_SIZE, thumbSize)
+
+    def onClick(self, controlId):
+        self.idHandlerDict.get(controlId, self.noop)()
+
+
+    def onAction(self, action):
+        self.actionHandlerDict.get(action.getId(), self.noop)()
+
+
+    def doSelect(self):
+        selectedPosition = self.panel.getSelectedPosition()
+        if self.indexFrom == None:
+            # Selecting a new item to reorder.
+            self.indexFrom = selectedPosition
+            self.panel.getSelectedItem().setProperty('selected', '1')
+        else:
+            # Something was already selected, so do the reodering.
+            if self.indexFrom != selectedPosition:
+                self.allItems[self.indexFrom].setProperty('selected', '')
+
+                # Reorder the two distinct items in a specific way:
+                reorderingMethod = getRawWindowProperty(REORDER_METHOD)
+
+                # If using the swap mode, or if the items are direct neighbors, then
+                # just swap them.
+                if reorderingMethod == '0' \
+                   or (self.indexFrom == (selectedPosition + 1)) \
+                   or (self.indexFrom == (selectedPosition - 1)):
+                    # Swap A and B.
+                    self.allItems[self.indexFrom], self.allItems[selectedPosition] = (
+                        self.allItems[selectedPosition], self.allItems[self.indexFrom]
+                    )
+                else:
+                    itemFrom = self.allItems.pop(self.indexFrom)
+                    if reorderingMethod == '1':
+                        # Place A behind B.
+                        # In case A is at some point BEHIND of B, reduce
+                        # one index because popping A caused the list to shrink.
+                        if self.indexFrom < selectedPosition:
+                            selectedPosition = selectedPosition - 1
+                    else:
+                        # Place A ahead of B (the original ordering method).
+                        # In case A is at some point AHEAD of B, move up
+                        # one index because .insert() always puts it behind.
+                        if self.indexFrom > selectedPosition:
+                            selectedPosition = selectedPosition + 1
+                    self.allItems.insert(selectedPosition, itemFrom)
+
+                # Reset the selection state.
+                self.isDirty = True
+                self.indexFrom = None
+
+                # Commit the changes to the UI, and highlight item A.
+                self.panel.reset()
+                self.panel.addItems(self.allItems)
+                self.panel.selectItem(selectedPosition)
+            else: # User reselected the item, so just unmark it.
+                self.indexFrom = None
+                self.panel.getSelectedItem().setProperty('selected', '')
+
+    def doUnselectClose(self):
+        # If there's something selected, unselect it. Otherwise, close the dialog.
+        if self.indexFrom != None:
+            self.allItems[self.indexFrom].setProperty('selected', '')
+            self.indexFrom = None
+        else:
+            self.close()
+
+
+    def doReload(self):
+        if xbmcgui.Dialog().yesno(
+            'Insert/Swap Favourites',
+            'This will restore the order from the favourites file so you can try reordering again.\nProceed?'
+        ):
+            # Re-sort all items based on their original indices.
+            selectedPosition = self.panel.getSelectedPosition()
+            self.indexFrom = None
+            self.allItems = sorted(self.allItems, key=lambda li: int(li.getProperty('index')))
+            self.panel.reset()
+            self.panel.addItems(self.allItems)
+            if selectedPosition != -1:
+                self.panel.selectItem(selectedPosition)
+
+
+    def _makeResult(self):
+        INDENT_STRING = ' ' * 4
+        return '<favourites>\n' + '\n'.join((INDENT_STRING + li.getPath()) for li in self.allItems) + '\n</favourites>\n'
+
+#===================================================================================
 
 def favouritesDataGen():
     file = xbmcvfs.File(FAVOURITES_PATH)
