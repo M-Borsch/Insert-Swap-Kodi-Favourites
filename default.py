@@ -57,7 +57,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         xbmcgui.WindowXMLDialog.__init__(self, *args, **kwargs)
 
         # Map control IDs to custom handler methods. You can find the control IDs inside
-        # the custom skin XML bundled with this add-on (/resources/skins/Default/1080i/CustomFavouritesDialog-lgThumbs.XML).
+        # the custom skin XML bundled with this add-on (/resources/skins/Default/1080i/CustomFavouritesDialog[sm lg].XML).
         self.idHandlerDict = {
             101: self.doSelect,
             301: self.close,
@@ -282,10 +282,10 @@ if '/dialog' in PLUGIN_URL:
     thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
     if thumbSize == '0':
         xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is SMALL)' % thumbSize)
-        ui = CustomFavouritesDialog('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
+        ui = CustomFavouritesDialog('CustomFavouritesDialog-smThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     else:
         xbmcgui.Dialog().ok('Insert/Swap', 'INFO: "%s"\n(thumSize is LARGE)' % thumbSize)
-        ui = CustomFavouritesDialog('CustomFavouritesDialog-smThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
+        ui = CustomFavouritesDialog('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     try:  
         result = ui.doCustomModal(favouritesDataGen())
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
