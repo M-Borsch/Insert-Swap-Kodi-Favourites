@@ -7,9 +7,13 @@
 > [!NOTE]
 > (Latest) - This is the latest version of the Insert-Swap Kodi Favourites
 
-Version 1.1 of Insert-Swap Kodi Favourites :sunglasses:
+Version 1.2 of Insert-Swap Kodi Favourites :sunglasses:
+- Added ability for users to set the Thumbnail size in the configuration panel
+- <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.2/Insert-Swap-Kodi-Favourites-1.2.zip">Download Insert-Swap-Kodi-Favourites (1.2) (zip file)</a> (Latest)
+-------------------------------
+  Version 1.1 of Insert-Swap Kodi Favourites :sunglasses:
 - Added ability for users to set the label Font size in the configuration panel
-- <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.1/Insert-Swap-Kodi-Favourites-1.1.zip">Download Insert-Swap-Kodi-Favourites (1.1) (zip file)</a> (Latest)
+- <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.1/Insert-Swap-Kodi-Favourites-1.1.zip">Download Insert-Swap-Kodi-Favourites (1.1) (zip file)</a>
 -------------------------------
 Version 1.0 of Insert-Swap Kodi Favourites
 - <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.0/Insert-Swap-Kodi-Favourites-1.0.zip">Download Insert-Swap-Kodi-Favourites (1.0) (zip file)</a>
