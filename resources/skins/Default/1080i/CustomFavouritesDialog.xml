@@ -111,7 +111,8 @@
                             <bordersize>10</bordersize>
                         </control>
                         <control type="textbox">
-                            <visible>String.IsEqual(Window.Property(fontSize),0)</visible>
+                            <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
+                            <visible>String.IsEqual(Window.Property(fontSize),0) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
                             <top>290</top>
                             <left>10</left>
@@ -122,24 +123,10 @@
                             <aligny>center</aligny>
                             <textcolor>FFFFFFFF</textcolor>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>!String.IsEqual(ListItem.DBType,album)</visible>
                         </control>
                         <control type="textbox">
-                            <visible>String.IsEqual(Window.Property(fontSize),1)</visible>
-                            <width>270</width>
-                            <top>290</top>
-                            <left>10</left>
-                            <right>10</right>
-                            <height>90</height>
-                            <font>font11</font>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <textcolor>FFFFFFFF</textcolor>
-                            <label>$INFO[ListItem.Label]</label>
-                            <visible>!String.IsEqual(ListItem.DBType,album)</visible>
-                        </control>
-                        <control type="textbox">
-                            <visible>String.IsEqual(Window.Property(fontSize),2)</visible>
+                            <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
+                            <visible>String.IsEqual(Window.Property(fontSize),1) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
                             <top>290</top>
                             <left>10</left>
@@ -150,7 +137,20 @@
                             <aligny>center</aligny>
                             <textcolor>FFFFFFFF</textcolor>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>!String.IsEqual(ListItem.DBType,album)</visible>
+                        </control>
+                        <control type="textbox">
+                            <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
+                            <visible>String.IsEqual(Window.Property(fontSize),2) + !String.IsEqual(ListItem.DBType,album)</visible>
+                            <width>270</width>
+                            <top>290</top>
+                            <left>10</left>
+                            <right>10</right>
+                            <height>90</height>
+                            <font>font11</font>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textcolor>FFFFFFFF</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
                         </control>
                     </itemlayout>
 
@@ -171,6 +171,8 @@
                             <bordersize>10</bordersize>
                         </control>
                         <control type="textbox">
+                            <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
+                            <visible>String.IsEqual(Window.Property(fontSize),0) + !String.IsEqual(ListItem.DBType,album)</visible>
                             <width>270</width>
                             <top>290</top>
                             <left>10</left>
@@ -181,7 +183,36 @@
                             <aligny>center</aligny>
                             <textcolor>FFFFFFFF</textcolor>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>!String.IsEqual(ListItem.DBType,album)</visible>
+                            <autoscroll delay="1000" time="1000" repeat="2000"></autoscroll>
+                        </control>
+                        <control type="textbox">
+                            <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
+                            <visible>String.IsEqual(Window.Property(fontSize),1) + !String.IsEqual(ListItem.DBType,album)</visible>
+                            <width>270</width>
+                            <top>290</top>
+                            <left>10</left>
+                            <right>10</right>
+                            <height>90</height>
+                            <font>font12</font>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textcolor>FFFFFFFF</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <autoscroll delay="1000" time="1000" repeat="2000"></autoscroll>
+                        </control>
+                        <control type="textbox">
+                            <!- Font10 (small), font12 (medium), font11 (large) go figure? -> 
+                            <visible>String.IsEqual(Window.Property(fontSize),2) + !String.IsEqual(ListItem.DBType,album)</visible>
+                            <width>270</width>
+                            <top>290</top>
+                            <left>10</left>
+                            <right>10</right>
+                            <height>90</height>
+                            <font>font11</font>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textcolor>FFFFFFFF</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
                             <autoscroll delay="1000" time="1000" repeat="2000"></autoscroll>
                         </control>
                         <control type="image">
@@ -262,7 +293,7 @@
 	            <bordersize>10</bordersize>
                 </control>
 		<control type="textbox">
-			<visible>true</visible>
+			<visible>false</visible>
 			<height>25</height>
 			<onleft>200</onleft>
 			<width>270</width>
