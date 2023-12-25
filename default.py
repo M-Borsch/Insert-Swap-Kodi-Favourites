@@ -41,6 +41,7 @@ PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
 REORDER_METHOD = 'reorder'
 THUMB_SIZE = 'thumbSize'
 FONT_SIZE = 'fontSize'
+THUMB_HEIGHT = 'thumbHeight'
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
@@ -98,7 +99,11 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.setProperty(FONT_SIZE, fontSize)
         thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
         self.setProperty(THUMB_SIZE, thumbSize)
-            
+        if thumbSize == 0:
+            self.setProperty(THUMB_HEIGHT, '240')
+        else:
+            self.setProperty(THUMB_HEIGHT, '390')
+
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
         self.isDirty = False # Bool saying if there were any user-made changes at all.
