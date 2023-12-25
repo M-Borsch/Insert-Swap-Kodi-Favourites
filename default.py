@@ -279,7 +279,8 @@ def xbmcLog(*args):
 ### Entry point ###
 
 if '/dialog' in PLUGIN_URL:
-    if getRawWindowProperty(thumbSize) == 0:
+    thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
+    if thumbSize == 0:
         ui = CustomFavouritesDialog('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     else:
         ui = CustomFavouritesDialog('CustomFavouritesDialog-smThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
