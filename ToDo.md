@@ -11,7 +11,7 @@
 >
 > - [x] - (Selectable Order Method) - ~~Add ability to configure Order Method (Swap, Insert Before, Insert After)~~
 >
-> - [ ] - (Icon Size) - Add ability to adjust/configure the size of the icons
+> - [ ] - (Icon Size) - Add ability to adjust/configure the size of the thumbnails
 >
-> - [ ] - (Font Size) - Add ability to adjust/configure the size of the font used for label 
+> - [x] - (Font Size) - ~~Add ability to adjust/configure the size of the font used for label~~ 
 
