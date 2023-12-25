@@ -6,7 +6,7 @@
 #
 # --------------------------------------------------------------------
 # M-Borsch 2023-12-24: Version 1.4.2
-# - Updated to include Thumbnail and Font size settings.
+# - Updated to include Font size settings.
 # --------------------------------------------------------------------
 # M-Borsch 2023-12-23: Version 1.4.1
 # - Updated to optimize reading of renderMethod
@@ -39,7 +39,6 @@ THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
 REORDER_METHOD = 'reorder'
-THUMB_SIZE = 'thumbSize'
 FONT_SIZE = 'fontSize'
 
 ADDON = Addon()
@@ -96,8 +95,6 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.setProperty(REORDER_METHOD, reorderingMethod)
         fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
         self.setProperty(FONT_SIZE, fontSize)
-        thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
-        self.setProperty(THUMB_SIZE, thumbSize)
 
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
