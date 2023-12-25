@@ -8,7 +8,5 @@
         <setting type="labelenum" id="test15" label="32015" lvalues="11|12|13|14"/>
         <setting id="thumbSize" label="Tumbnail Size" type="enum" default="1"
                  values="Small|Large"/>
-        <setting id="newthumbSize" label="Tumbnail Size" type="labelnum"
-                 values="145|290"/>
     </category>
 </settings>
