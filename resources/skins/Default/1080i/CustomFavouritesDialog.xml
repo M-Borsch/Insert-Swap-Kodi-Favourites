@@ -111,12 +111,41 @@
                             <bordersize>10</bordersize>
                         </control>
                         <control type="textbox">
+                            <visible>String.IsEqual(Window.Property(fontSize),0)</visible>
                             <width>270</width>
                             <top>290</top>
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
                             <font>font10</font>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textcolor>FFFFFFFF</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!String.IsEqual(ListItem.DBType,album)</visible>
+                        </control>
+                        <control type="textbox">
+                            <visible>String.IsEqual(Window.Property(fontSize),1)</visible>
+                            <width>270</width>
+                            <top>290</top>
+                            <left>10</left>
+                            <right>10</right>
+                            <height>90</height>
+                            <font>font11</font>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textcolor>FFFFFFFF</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!String.IsEqual(ListItem.DBType,album)</visible>
+                        </control>
+                        <control type="textbox">
+                            <visible>String.IsEqual(Window.Property(fontSize),2)</visible>
+                            <width>270</width>
+                            <top>290</top>
+                            <left>10</left>
+                            <right>10</right>
+                            <height>90</height>
+                            <font>font12</font>
                             <align>center</align>
                             <aligny>center</aligny>
                             <textcolor>FFFFFFFF</textcolor>
@@ -147,7 +176,7 @@
                             <left>10</left>
                             <right>10</right>
                             <height>90</height>
-                            <font>font12</font>
+                            <font>font10</font>
                             <align>center</align>
                             <aligny>center</aligny>
                             <textcolor>FFFFFFFF</textcolor>
