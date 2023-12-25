@@ -15,6 +15,5 @@
                     </options>
                  </constraints>
 	            <control type="spinner" format="string"/>
-        </setting>
     </category>
 </settings>
