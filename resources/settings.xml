@@ -3,6 +3,7 @@
     <category label="General">
         <setting id="reorderingMethod" label="Reordering Method" type="enum" default="0"
                  values="Swap A and B|Insert A before B|Insert A after B"/>
+        <setting type="labelenum" id="test15" label="32015" lvalues="11|12|13|14"/>
         <setting id="fontSize" label="Font Size" type="enum" default="0"
                  values="Small|Medium|Large"/>
         <setting type="labelenum" id="new-thumbSize" label="Tumbnail Size" lvalues="145|270|13|14"/>
