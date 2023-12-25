@@ -5,6 +5,10 @@
 # favourites.xml file.
 #
 # --------------------------------------------------------------------
+# M-Borsch 2023-12-24: Version 1.4.3
+# - Updated to include Thumb size settings.
+# - <ust have 2 versions of the skin - ! for large and 1 for small thumbs
+# --------------------------------------------------------------------
 # M-Borsch 2023-12-24: Version 1.4.2
 # - Updated to include Font size settings.
 # --------------------------------------------------------------------
@@ -40,6 +44,7 @@ THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 PROPERTY_FAVOURITES_RESULT = 'ordfav.result'
 REORDER_METHOD = 'reorder'
 FONT_SIZE = 'fontSize'
+THUMB_SIZE = 'thumbSize'
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
@@ -47,12 +52,12 @@ PLUGIN_URL = sys.argv[0]
 
 
 # Custom Favourites window class for managing the favourites items.
-class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
+class CustomFavouritesDialog-lgThumbs(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
         xbmcgui.WindowXMLDialog.__init__(self, *args, **kwargs)
 
         # Map control IDs to custom handler methods. You can find the control IDs inside
-        # the custom skin XML bundled with this add-on (/resources/skins/Default/1080i/CustomFavouritesDialog.XML).
+        # the custom skin XML bundled with this add-on (/resources/skins/Default/1080i/CustomFavouritesDialog-lgThumbs.XML).
         self.idHandlerDict = {
             101: self.doSelect,
             301: self.close,
@@ -115,6 +120,8 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         self.setFocusId(100) # Focus the group containing the panel, not the panel itself.
         reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
         setRawWindowProperty(REORDER_METHOD, reorderingMethod)
+        thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
+        setRawWindowProperty(THUMB_SIZE, thumbSize)
 
     def onClick(self, controlId):
         self.idHandlerDict.get(controlId, self.noop)()
@@ -271,7 +278,7 @@ def xbmcLog(*args):
 ### Entry point ###
 
 if '/dialog' in PLUGIN_URL:
-    ui = CustomFavouritesDialog('CustomFavouritesDialog.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
+    ui = CustomFavouritesDialog-lgThumbs('CustomFavouritesDialog-lgThumbs.xml', ADDON.getAddonInfo('path'), 'Default', '1080i')
     try:  
         result = ui.doCustomModal(favouritesDataGen())
         setRawWindowProperty(PROPERTY_FAVOURITES_RESULT, result)
