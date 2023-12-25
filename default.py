@@ -97,12 +97,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
         self.setProperty(FONT_SIZE, fontSize)
         thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
-        if thumbSize == 0:
-            # Set the thumbSize to small
-            self.setProperty(THUMB_SIZE, '145')
-        else:
-            # Set the thumbSize to large
-            self.setProperty(THUMB_SIZE, '290')
+        self.setProperty(THUMB_SIZE, thumbSize)
             
         self.allItems = list(self._makeFavourites(favouritesGen))
         self.indexFrom = None # Integer index of the source item (or None when nothing is selected).
