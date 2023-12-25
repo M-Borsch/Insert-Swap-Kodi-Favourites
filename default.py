@@ -95,7 +95,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
         reorderingMethod = '0' if not ADDON.getSetting('reorderingMethod') else ADDON.getSetting('reorderingMethod')
         self.setProperty(REORDER_METHOD, reorderingMethod)
         fontSize = '0' if not ADDON.getSetting('fontSize') else ADDON.getSetting('fontSize')
-        self.setProperty(FONT_SIZE, thumbSize)
+        self.setProperty(FONT_SIZE, fontSize)
         thumbSize = '0' if not ADDON.getSetting('thumbSize') else ADDON.getSetting('thumbSize')
         if thumbSize == 0:
             # Set the thumbSize to small
