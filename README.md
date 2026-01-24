@@ -3,7 +3,7 @@
 
 # Program Addon: Insert-Swap Kodi Favourites
 
-### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins.
+### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins. Use this Porgram addon to easilly sort (e.g. organize or alphabetize) your Kodi Favourites list.
 > [!NOTE]
 > (Latest) - This is the latest version of the Insert-Swap Kodi Favourites
 
