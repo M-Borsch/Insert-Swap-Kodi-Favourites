@@ -1,8 +1,12 @@
 # Insert-Swap Kodi Favourites
-![icon](https://github.com/M-Borsch/OrderFavourtites/blob/master/icon.png)  
+This Kodi Program Addon allows you to manage your Kodi favourites by inserting or swapping items and/or adding a prefix, suffix and color to you Kodi favourites
+
+![icon](MB-KODI-icon.png) <img src="Insert-Swap-icon.png" alt="Insert/Swap" height="250">
+
+> [!IMPORTANT]
+> Insert-Swap Kodi Favourites has been replaced by the "Manage Kodi Favourites" Program Addon
 
 # Program Addon: Insert-Swap Kodi Favourites
-
 ### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins. Use this Porgram addon to easilly sort (e.g. organize or alphabetize) your Kodi Favourites list.
 > [!NOTE]
 > (Latest) - This is the latest version of the Insert-Swap Kodi Favourites
@@ -49,6 +53,7 @@ Saves your changes but doesn't reload Kodi (as this operation can crash in some 
 
 ### 4) Exit only
 Just steps back from the add-on, no saving.
+
 ------------------------------------------------------------------------------------------------------------------
 > [!IMPORTANT]
 > MB-KODI Terms and Conditions / Disclaimer
