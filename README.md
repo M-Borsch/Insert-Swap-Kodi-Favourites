@@ -1,4 +1,5 @@
 # Insert-Swap Kodi Favourites
+
 This Kodi Program Addon allows you to manage your Kodi favourites by inserting or swapping items and/or adding a prefix, suffix and color to you Kodi favourites
 
 ![icon](MB-KODI-icon.png) <img src="Insert-Swap-icon.png" alt="Insert/Swap" height="250">
@@ -7,7 +8,9 @@ This Kodi Program Addon allows you to manage your Kodi favourites by inserting o
 > Insert-Swap Kodi Favourites has been replaced by the "Manage Kodi Favourites" Program Addon
 
 # Program Addon: Insert-Swap Kodi Favourites
-### This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins. Use this Porgram addon to easilly sort (e.g. organize or alphabetize) your Kodi Favourites list.
+
+This is a simple & lightweight program add-on that lets you quickly reorganize your Kodi favourites that works on multiple Kodi skins. Use this Porgram addon to easilly sort (e.g. organize or alphabetize) your Kodi Favourites list.
+
 > [!NOTE]
 > (Latest) - This is the latest version of the Insert-Swap Kodi Favourites
 
@@ -16,20 +19,20 @@ Version 1.2 of Insert-Swap Kodi Favourites :sunglasses:
 
 <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.2/Insert-Swap-Kodi-Favourites-1.2.zip">Download Insert-Swap-Kodi-Favourites (1.2) (zip file)</a> (Latest)
 
--------------------------------
+<hr>
 
-  Version 1.1 of Insert-Swap Kodi Favourites :sunglasses:
+Version 1.1 of Insert-Swap Kodi Favourites :sunglasses:
 - Added ability for users to set the label Font size in the configuration panel
 
 <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.1/Insert-Swap-Kodi-Favourites-1.1.zip">Download Insert-Swap-Kodi-Favourites (1.1) (zip file)</a>
 
--------------------------------
+<hr>
 
 Version 1.0 of Insert-Swap Kodi Favourites
 
 <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.0/Insert-Swap-Kodi-Favourites-1.0.zip">Download Insert-Swap-Kodi-Favourites (1.0) (zip file)</a>
 
--------------------------------
+<hr>
 
 # How to use:
 
