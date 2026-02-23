@@ -13,15 +13,24 @@ This Kodi Program Addon allows you to manage your Kodi favourites by inserting o
 
 Version 1.2 of Insert-Swap Kodi Favourites :sunglasses:
 - Added ability for users to set the Thumbnail size in the configuration panel
-- <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.2/Insert-Swap-Kodi-Favourites-1.2.zip">Download Insert-Swap-Kodi-Favourites (1.2) (zip file)</a> (Latest)
+
+<a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.2/Insert-Swap-Kodi-Favourites-1.2.zip">Download Insert-Swap-Kodi-Favourites (1.2) (zip file)</a> (Latest)
+
 -------------------------------
+
   Version 1.1 of Insert-Swap Kodi Favourites :sunglasses:
 - Added ability for users to set the label Font size in the configuration panel
-- <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.1/Insert-Swap-Kodi-Favourites-1.1.zip">Download Insert-Swap-Kodi-Favourites (1.1) (zip file)</a>
+
+<a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.1/Insert-Swap-Kodi-Favourites-1.1.zip">Download Insert-Swap-Kodi-Favourites (1.1) (zip file)</a>
+
 -------------------------------
+
 Version 1.0 of Insert-Swap Kodi Favourites
-- <a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.0/Insert-Swap-Kodi-Favourites-1.0.zip">Download Insert-Swap-Kodi-Favourites (1.0) (zip file)</a>
+
+<a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.0/Insert-Swap-Kodi-Favourites-1.0.zip">Download Insert-Swap-Kodi-Favourites (1.0) (zip file)</a>
+
 -------------------------------
+
 # How to use:
 
 > [!IMPORTANT]
@@ -54,13 +63,15 @@ Saves your changes but doesn't reload Kodi (as this operation can crash in some 
 ### 4) Exit only
 Just steps back from the add-on, no saving.
 
-
 ### Reference Articles availiable at: <a href="http://borsch.ca">borsch.ca</a>
 - <a href="http://borsch.myqnapcloud.com:8083/index.php/articles-by-group/how-to/howto-create-a-github-kodi-addon?highlight=WyJrb2RpIl0="><b><i></i></b><i>Article on how to build a Kodi Repository and an Addon on borsch.ca</i></a>
-<br />
+
 Questions/Comments/thanks - <a href="mailto:kodi@borsch.ca">Send an email to MB-KODI</a><br />
+
 <hr>
+
 <p><img class="an1" draggable="false" src="https://fonts.gstatic.com/s/e/notoemoji/15.1/26a0_fe0f/72.png" alt="âš ï¸" width="20" loading="lazy" data-emoji="âš ï¸" aria-label="âš ï¸"> No Copyright infringement intended <img class="an1" draggable="false" src="https://fonts.gstatic.com/s/e/notoemoji/15.1/274c/72.png" alt="âŒ" width="20" loading="lazy" data-emoji="âŒ" aria-label="âŒ"> <a href="mailto:kodi@borsch.ca">Send an email to MB-KODI</a> to fix / Remove. (<span style="font-size: 8px;"><em>NAS</em></span>)</p>
+
 <hr>
 
 > [!IMPORTANT]
