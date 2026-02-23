@@ -17,22 +17,9 @@ This is a simple & lightweight program add-on that lets you quickly reorganize y
 Version 1.2 of Insert-Swap Kodi Favourites :sunglasses:
 - Added ability for users to set the Thumbnail size in the configuration panel
 
-<a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.2/Insert-Swap-Kodi-Favourites-1.2.zip">Download Insert-Swap-Kodi-Favourites (1.2) (zip file)</a> (Latest)
+<a href="Insert-Swap-Kodi-Favourites-1.2.zip">Insert-Swap-Kodi-Favourites-1.2.zip</a> (Latest)
 
-<hr>
-
-Version 1.1 of Insert-Swap Kodi Favourites :sunglasses:
-- Added ability for users to set the label Font size in the configuration panel
-
-<a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.1/Insert-Swap-Kodi-Favourites-1.1.zip">Download Insert-Swap-Kodi-Favourites (1.1) (zip file)</a>
-
-<hr>
-
-Version 1.0 of Insert-Swap Kodi Favourites
-
-<a href="https://github.com/M-Borsch/Insert-Swap-Kodi-Favourites/releases/download/Insert-Swap-Kodi-Favourites-1.0/Insert-Swap-Kodi-Favourites-1.0.zip">Download Insert-Swap-Kodi-Favourites (1.0) (zip file)</a>
-
-<hr>
+ <p>Supported by MB-KODI ✔️</p>
 
 # How to use:
 
@@ -47,7 +34,8 @@ Version 1.0 of Insert-Swap Kodi Favourites
 >
 > **Insert Affter**:
 >    The marked item **"A"** will be placed **after** the marked item **"B"** in the list.
-> 
+>
+
 The main menu shows 4 options.
 
 ### 1) Insert-Swap Kodi Favourites...   
